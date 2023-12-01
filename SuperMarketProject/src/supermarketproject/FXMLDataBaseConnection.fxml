@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="469.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketproject.FXMLDataBaseConnectionController">
+   <children>
+      <ImageView fitHeight="103.0" fitWidth="114.0" layoutX="314.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/hosting.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="52.0" fitWidth="103.0" layoutX="565.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/alert.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="485.0" layoutY="218.0" prefHeight="235.0" prefWidth="233.0" text="Important : The connection with data base is by default in &quot;localhost&quot; with port &quot;3306&quot; if you want to change the connection make sure that you fill the correct host and port !!!!!!!!" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hostInp" layoutX="50.0" layoutY="206.0" prefHeight="52.0" prefWidth="298.0" promptText="Host">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="portInp" layoutX="50.0" layoutY="275.0" prefHeight="52.0" prefWidth="298.0" promptText="Port Number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="changeBut" layoutX="65.0" layoutY="375.0" mnemonicParsing="false" onAction="#change" prefHeight="40.0" prefWidth="122.0" text="Change">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelBut" layoutX="208.0" layoutY="374.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="122.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

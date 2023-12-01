@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketproject.FXMLUpdatePassController">
+   <children>
+      <ImageView fitHeight="183.0" fitWidth="177.0" layoutX="200.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="223.0">
+         <image>
+            <Image url="@imgs/pass.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="currPass" layoutX="127.0" layoutY="280.0" prefHeight="61.0" prefWidth="452.0" promptText="Current Password" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newPass" layoutX="74.0" layoutY="384.0" prefHeight="61.0" prefWidth="452.0" promptText="New password" AnchorPane.leftAnchor="74.0" AnchorPane.rightAnchor="74.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </TextField>
+      <Button fx:id="update" layoutX="101.0" layoutY="519.0" mnemonicParsing="false" onAction="#update" prefHeight="52.0" prefWidth="177.0" text="Update" textFill="#ffa201">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="337.0" layoutY="519.0" mnemonicParsing="false" onAction="#exit" prefHeight="52.0" prefWidth="177.0" text="Back" textFill="#f20808">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

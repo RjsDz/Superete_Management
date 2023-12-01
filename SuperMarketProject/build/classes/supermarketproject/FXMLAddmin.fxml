@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketproject.FXMLAddminController">
+   <children>
+      <ImageView fitHeight="122.0" fitWidth="152.0" layoutX="147.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/admin.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userInp" alignment="CENTER" layoutX="68.0" layoutY="199.0" prefHeight="42.0" prefWidth="274.0" promptText="Username...">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="sendBut" layoutX="121.0" layoutY="268.0" mnemonicParsing="false" onAction="#send" prefHeight="40.0" prefWidth="172.0" text="ADD ADDMIN" textFill="#26ff00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deletBut" layoutX="120.0" layoutY="317.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="172.0" text="DELET ADDMIN" textFill="#ff8500">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitBut" layoutX="122.0" layoutY="369.0" mnemonicParsing="false" onAction="#exit" prefHeight="40.0" prefWidth="172.0" text="EXIT" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

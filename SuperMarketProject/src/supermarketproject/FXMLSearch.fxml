@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="544.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketproject.FXMLSearchController">
+   <children>
+      <TextField fx:id="searchInp" layoutX="20.0" layoutY="30.0" onKeyReleased="#matchedValue" prefHeight="42.0" prefWidth="438.0" promptText="Search.....">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="search" layoutX="464.0" layoutY="31.0" mnemonicParsing="false" onAction="#add" prefHeight="40.0" prefWidth="150.0" text="Send (Ctrl +B)">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="31.0" layoutY="97.0" onMouseClicked="#selectedRow" prefHeight="392.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="idC" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="pC" prefWidth="193.0" text="Product" />
+            <TableColumn fx:id="cC" prefWidth="179.0" text="Code Bare" />
+            <TableColumn fx:id="prC" minWidth="60.0" prefWidth="128.0" text="Price" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="hideDoor" fitHeight="40.0" fitWidth="36.0" layoutX="20.0" layoutY="500.0" onMouseClicked="#hideWindow" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imgs/exit.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="71.0" layoutY="504.0" text="Ctrl + N">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

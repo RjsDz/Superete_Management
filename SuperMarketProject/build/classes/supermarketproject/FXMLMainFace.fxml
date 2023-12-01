@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainp" minWidth="1246.0" prefHeight="773.0" prefWidth="1246.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supermarketproject.FXMLMainFaceController">
+   <children>
+      <GridPane fx:id="toppane" layoutX="206.0" layoutY="493.0" prefHeight="154.0" prefWidth="1162.0" style="-fx-background-color: #4db6ac;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="160.0" prefWidth="270.0">
+               <children>
+                  <Label text="Counter Sales" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="13.0" top="9.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userLab" text="RJS  RJS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="104.0" />
+                     </VBox.margin>
+                  </Label>
+                  <AnchorPane maxHeight="60.0" maxWidth="259.0" prefHeight="64.0" prefWidth="242.0" style="-fx-border-color: cyan; -fx-border-width: 2px;">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="6.0" top="6.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label layoutX="8.0" layoutY="17.0" text="code-Barre (F7)" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="codeBar" alignment="CENTER" focusTraversable="false" layoutX="119.0" layoutY="10.0" prefHeight="34.0" prefWidth="139.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" layoutX="7.0" layoutY="-18.0" prefWidth="76.0" style="-fx-background-color: #4db6ac;" text="Search" textFill="AQUA">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="154.0" prefWidth="499.0" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="priceTotal" alignment="CENTER" prefHeight="94.0" prefWidth="422.0" text="0000.00" textFill="#ffea00">
+                     <font>
+                        <Font name="Arial Bold" size="72.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="155.0" prefWidth="391.0" GridPane.columnIndex="2">
+               <children>
+                  <VBox alignment="CENTER" layoutX="182.0" layoutY="-10.0" prefHeight="162.0" prefWidth="386.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                     <children>
+                        <Label text="Bon N°" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numBon" text="99999" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="time" text="00:00:00">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date" text="11/03/2023">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="232.0" layoutY="279.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="175.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="cdColumn" prefWidth="149.3999605178833" text="Code-barres" />
+                  <TableColumn minWidth="0.0" prefWidth="0.0" text="Column X" />
+                  <TableColumn fx:id="dColumn" minWidth="178.0" prefWidth="188.0" text="Disignation" />
+                  <TableColumn fx:id="qColumn" prefWidth="68.0" text="Qte" />
+                  <TableColumn fx:id="uColumn" prefWidth="92.0" text="Unit Price" />
+                  <TableColumn fx:id="sColumn" minWidth="77.0" prefWidth="110.20001220703125" text="Sum" />
+              </columns>
+            </TableView>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="f5" fitHeight="55.0" fitWidth="36.0" layoutX="14.0" layoutY="29.0" onMouseClicked="#addQte" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="f4" fitHeight="55.0" fitWidth="36.0" layoutX="14.0" layoutY="72.0" onMouseClicked="#minusQte" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/minus.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="68.0" layoutY="33.0" text="(F5)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="76.0" text="(F4)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="client1" layoutX="14.0" layoutY="122.0" mnemonicParsing="false" onAction="#client1Func" prefHeight="42.0" prefWidth="130.0" text="Client1(F1)" textFill="#4db6ac">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="client2" layoutX="14.0" layoutY="172.0" mnemonicParsing="false" onAction="#client2Func" prefHeight="40.0" prefWidth="130.0" text="Client2(F2)" textFill="#4db6ac">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="client3" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#client3Func" prefHeight="42.0" prefWidth="130.0" text="Client3(F3)" textFill="#4db6ac">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="check" layoutX="14.0" layoutY="275.0" mnemonicParsing="false" onAction="#openTab" prefHeight="42.0" prefWidth="130.0" text="Search(F10)" textFill="#4db6ac">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="delete" layoutX="14.0" layoutY="381.0" mnemonicParsing="false" onAction="#deleteFunc" prefHeight="42.0" prefWidth="130.0" text="Delete(F11)" textFill="RED">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Pane layoutX="162.0" layoutY="13.0" prefHeight="107.0" prefWidth="253.0" style="-fx-border-color: black; -fx-border-width: 2px; -fx-border-radius: 14px;">
+                     <children>
+                        <Label fx:id="receivedLab" layoutX="13.0" layoutY="22.0" text="Received (F8)" />
+                        <Label fx:id="renderedLab" layoutX="13.0" layoutY="65.0" text="Rendered" />
+                        <TextField fx:id="received" alignment="CENTER" layoutX="96.0" layoutY="11.0" onKeyReleased="#receivedRendered" prefHeight="30.0" prefWidth="143.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="rendered" alignment="CENTER" editable="false" layoutX="95.0" layoutY="59.0" prefHeight="30.0" prefWidth="143.0" style="-fx-text-fill: green;">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Label fx:id="calculateLab" alignment="CENTER" layoutX="178.0" layoutY="3.0" prefWidth="80.0" style="-fx-background-color: #f5f5f5;" text="Calculate" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="162.0" layoutY="154.0" prefHeight="107.0" prefWidth="250.0" style="-fx-border-color: black; -fx-border-width: 2px; -fx-border-radius: 14px;">
+                     <children>
+                        <Label fx:id="issue" layoutX="27.0" layoutY="20.0" text="(Ctrl+F8) -&gt; (Ctrl+F9)">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="ctrlF8" alignment="CENTER" layoutX="21.0" layoutY="49.0" prefHeight="35.0" prefWidth="212.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Label fx:id="changeQteLab" alignment="CENTER" layoutX="178.0" layoutY="143.0" prefHeight="22.0" prefWidth="139.0" style="-fx-background-color: #f5f5f5;" text="Change Qte" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="7.0" layoutY="422.0" prefHeight="55.0" prefWidth="250.0">
+                     <children>
+                        <Button fx:id="exit" layoutX="6.0" layoutY="11.0" mnemonicParsing="false" onAction="#exitFunc" prefHeight="42.0" prefWidth="130.0" style="-fx-background-color: red;" text="Exit (F12)" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Label fx:id="itemsLab" alignment="CENTER" layoutX="205.0" layoutY="403.0" prefHeight="22.0" prefWidth="58.0" text="Items">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="items" alignment="CENTER" layoutX="208.0" layoutY="435.0" prefHeight="35.0" prefWidth="58.0" style="-fx-background-color: yellow; -fx-border-color: #000000;" text="00" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="changePass" layoutX="167.0" layoutY="350.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="42.0" prefWidth="185.0" text="Change Password">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="60.0" fitWidth="76.0" layoutX="222.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/lock.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="427.0" layoutY="8.0" prefHeight="550.0" prefWidth="178.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                     <children>
+                        <ImageView fitHeight="79.0" fitWidth="107.0" layoutX="49.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imgs/dbroot.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="users" layoutX="24.0" layoutY="126.0" mnemonicParsing="false" onAction="#usersFunc" prefHeight="42.0" prefWidth="130.0" text="Users">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="products" layoutX="24.0" layoutY="178.0" mnemonicParsing="false" onAction="#productFunc" prefHeight="42.0" prefWidth="130.0" text="Products">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="sales" layoutX="24.0" layoutY="233.0" mnemonicParsing="false" onAction="#showSalesStat" prefHeight="42.0" prefWidth="130.0" text="Sales">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="admin" layoutX="24.0" layoutY="290.0" mnemonicParsing="false" onAction="#openAdminPage" prefHeight="42.0" prefWidth="130.0" text="Admin">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="control" layoutX="26.0" layoutY="346.0" mnemonicParsing="false" onAction="#controlFunc" prefHeight="42.0" prefWidth="130.0" text="Control ">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="dbCon" layoutX="26.0" layoutY="402.0" mnemonicParsing="false" onAction="#openDBConfig" prefHeight="42.0" prefWidth="130.0" text="Data Base">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Button fx:id="f5" layoutX="68.0" layoutY="34.0" mnemonicParsing="false" onAction="#addQte" text="F5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="f4" layoutX="68.0" layoutY="77.0" mnemonicParsing="false" onAction="#minusQte" text="F4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <CheckBox fx:id="checkBox" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#togleMode" prefHeight="35.0" prefWidth="163.0" text="Dark Mode">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </CheckBox>
+                  <Button fx:id="delRow" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" onAction="#deletSale" prefHeight="42.0" prefWidth="130.0" text="Del Row(F6)" textFill="#ff7e00">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fx:id="printer" fitHeight="42.0" fitWidth="34.0" layoutX="439.0" layoutY="510.0" onMouseClicked="#printInvoice" pickOnBounds="true" preserveRatio="true" x="-426.0" y="18.0">
+                     <image>
+                        <Image url="@imgs/printer.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="cp" layoutX="69.0" layoutY="535.0" text="Ctrl+P">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="calculator" fitHeight="36.0" fitWidth="43.0" layoutX="191.0" layoutY="525.0" onMouseClicked="#openCalc" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/calculator.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="ctrlC" layoutX="242.0" layoutY="533.0" text="Ctrl+C">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
